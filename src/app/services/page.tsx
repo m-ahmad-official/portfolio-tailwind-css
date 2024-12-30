@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
+import Script2 from "@/components/Script2";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Services() {
     return (
@@ -37,6 +39,8 @@ export default function Services() {
                     </div>
                 </div>
             </section>
+            <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
+            <Script2 />
         </>
     );
 }

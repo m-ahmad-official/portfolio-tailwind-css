@@ -3,8 +3,10 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
+import Script1 from "@/components/Script1";
 import Services from "@/components/Services";
 import Image from "next/image";
+import Script from "next/script";
 import { useState } from "react";
 
 export default function Home() {
@@ -74,6 +76,8 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
+      <Script1 />
     </>
   );
 }

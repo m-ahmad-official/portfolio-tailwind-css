@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
+import Script2 from "@/components/Script2";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function About() {
     return (
@@ -16,6 +18,8 @@ export default function About() {
                     <button className="btn inline-block bg-[#01c38d] max-sm:mt-6 py-[1rem] px-[2.8rem] bg-[#c] rounded-[4rem] shadow-[0_0_1rem_rgba(1,195,141)] text-[1.6rem] text-[#19292d] font-semibold tracking-wider transition-all duration-[.5s] ease hover:shadow-none">Read More</button>
                 </div>
             </section>
+            <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
+            <Script2 />
         </>
     );
 }

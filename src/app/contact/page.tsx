@@ -1,4 +1,6 @@
 import Header from "@/components/Header";
+import Script2 from "@/components/Script2";
+import Script from "next/script";
 
 export default function Contact() {
     return (
@@ -21,6 +23,8 @@ export default function Contact() {
                     </form>
                 </div>
             </section>
+            <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
+            <Script2 />
         </>
     );
 }

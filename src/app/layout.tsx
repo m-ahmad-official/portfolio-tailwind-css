@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
-import Script1 from "@/components/Script";
 
 const poppins = Poppins({
   subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
@@ -28,8 +26,6 @@ export default function RootLayout({
         className={`${poppins.className} ${poppins.className} antialiased m-0 p-0 box-border no-underline border-none outline-none scroll-smooth`}
       >
         {children}
-        <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
-        <Script1 />
       </body>
     </html>
   );
