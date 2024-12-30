@@ -1,8 +1,10 @@
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function Projects() {
     return (
         <>
+            <Header />
             <section className="bg-[#19292d] min-h-[110vh] px-[9%] max-sm:pt-56 max-sm:pb-24 flex items-center justify-center">
                 <div>
                     <h2 className="text-7xl text-center font-bold text-white pb-20 sm:pb-28 heading">Latest <span className="text-[#01c38d]">Projects</span></h2>

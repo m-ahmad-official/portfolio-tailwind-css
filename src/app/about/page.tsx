@@ -1,8 +1,10 @@
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function About() {
     return (
         <>
+            <Header />
             <section className="bg-[#19292d] min-h-[100vh] px-[9%] flex justify-between items-center gap-8">
                 <div className="sm:block hidden about-img">
                     <Image src="/images/about.png" alt="About" width={450} height={450} />

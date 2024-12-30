@@ -26,10 +26,11 @@ const Script: React.FC = () => {
     });
     sr.reveal(".home-content p, .about-content", { origin: "right" });
 
-    const typed = new Typed(".multiple-text", options);
-    return () => {
-      typed.destroy();
-    };
+    // const typed = new Typed(".multiple-text", options);
+    // return () => {
+    //   typed.destroy();
+    // };
+
   }, []);
   return <div></div>;
 };

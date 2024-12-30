@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Script from "next/script";
 import Script1 from "@/components/Script";
 
@@ -33,11 +28,6 @@ export default function RootLayout({
         className={`${poppins.className} ${poppins.className} antialiased m-0 p-0 box-border no-underline border-none outline-none scroll-smooth`}
       >
         {children}
-        <About />
-        <Services />
-        <Projects />
-        <Contact />
-        <Footer />
         <Script src="https://unpkg.com/scrollreveal" strategy="beforeInteractive" />
         <Script1 />
       </body>

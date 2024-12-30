@@ -1,6 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Contact() {
     return (
         <>
+            <Header />
             <section className="bg-[#05161a] sm:min-h-[100vh] max-sm:pt-56 max-sm:pb-20 px-[9%] flex items-center justify-center contact">
                 <div>
                     <h2 className="text-7xl text-center font-bold text-white mb-12 heading">Contact <span className="text-[#01c38d]">Me!</span></h2>

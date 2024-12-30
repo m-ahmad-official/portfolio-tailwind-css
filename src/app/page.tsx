@@ -1,4 +1,9 @@
 "use client";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -15,21 +20,21 @@ export default function Home() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full py-10 px-[9%] bg-[#05161a] flex justify-between items-center">
+      <header className="w-full py-10 px-[9%] bg-[#05161a] flex justify-between items-center">
         <h3 className="text-[2.5rem] text-white font-semibold cursor-default">Portfolio</h3>
         <div className="sm:hidden" onClick={toggleMenu}>
-          <i className='bx bx-menu text-[3.6rem] text-white'></i>
+          <i className="bx bx-menu text-[3.6rem] text-white"></i>
         </div>
 
-        <nav className={`flex gap-16 ${menuOpen ? 'block' : 'hidden'} sm:flex`}>
-          <a href="#home" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Home</a>
-          <a href="#about" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">About</a>
-          <a href="#services" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Services</a>
-          <a href="#projects" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Projects</a>
-          <a href="#contact" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Contact</a>
+        <nav className={`hidden sm:flex gap-16`}>
+          <a href="/" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Home</a>
+          <a href="/about" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">About</a>
+          <a href="/services" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Services</a>
+          <a href="/projects" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Projects</a>
+          <a href="/contact" className="text-[1.7rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Contact</a>
         </nav>
       </header>
-      <section className="min-h-[100vh] pt-[10rem] px-[9%] pb-[2rem] bg-[#05161a] flex max-sm:flex-col-reverse gap-16 sm:justify-between justify-center items-center" id="home">
+      <section className="min-h-[100vh] pt-[10rem] px-[9%] pb-[2rem] bg-[#05161a] flex max-sm:flex-col-reverse gap-16 sm:justify-between justify-center items-center">
         <div className="max-sm:flex max-sm:flex-col max-sm:text-center gap-2 home-content">
           <h3 className="sm:text-[3.2rem] text-[2rem] font-bold text-white">Hello, It is Me</h3>
           <h1 className="text-white sm:text-[5.6rem] text-[3rem] font-bold leading-[1.3]">Muhammad Ahmed</h1>
@@ -49,19 +54,26 @@ export default function Home() {
         </div>
       </section>
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-[#05161a] z-10 flex flex-col items-center justify-center">
-          <button onClick={closeMenu} className="absolute top-7 right-16 text-white text-[3.4rem]">
+        <div className="fixed inset-0 bg-[#05161a] z-10 flex flex-col items-center justify-center">
+          <button
+            onClick={closeMenu}
+            className="absolute top-7 right-16 text-white text-[3.4rem]">
             &#10006;
           </button>
           <nav className="flex flex-col items-center gap-10">
-            <a href="#home" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Home</a>
-            <a href="#about" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">About</a>
-            <a href="#services" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Services</a>
-            <a href="#projects" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Projects</a>
-            <a href="#contact" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-[.3s]">Contact</a>
+            <a href="/" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Home</a>
+            <a href="/about" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">About</a>
+            <a href="/services" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Services</a>
+            <a href="/projects" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Projects</a>
+            <a href="/contact" onClick={closeMenu} className="text-[2rem] text-white font-medium hover:text-[#01c38d] transition-all duration-300">Contact</a>
           </nav>
         </div>
       )}
+      <About />
+      <Services />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }

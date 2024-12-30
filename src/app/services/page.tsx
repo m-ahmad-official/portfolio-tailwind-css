@@ -1,8 +1,10 @@
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function Services() {
     return (
         <>
+            <Header />
             <section className="bg-[#05161a] min-h-[100vh] max-sm:pt-56 max-sm:pb-24 px-[9%] flex items-center justify-center">
                 <div>
                     <h2 className="text-7xl text-center font-bold text-white mb-20 heading">Our <span className="text-[#01c38d]">Services</span></h2>
